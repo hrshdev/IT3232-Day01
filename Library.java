@@ -9,9 +9,17 @@ abstract class Book {
         this.isbn = isbn;
     }
 
-    public String getTitle() { return title; }
-    public String getAuthor() { return author; }
-    public String getISBN() { return isbn; }
+    public String getTitle() {
+        return title; 
+    }
+
+    public String getAuthor() { 
+        return author; 
+    }
+
+    public String getISBN() { 
+        return isbn; 
+    }
 
     public abstract void displayDetails();
 }
@@ -26,12 +34,10 @@ class PrintedBook extends Book {
 
     @Override
     public void displayDetails() {
-        System.out.println("Printed Book: " + getTitle() + " by " + getAuthor() + 
-                           "\nISBN: " + getISBN() + "\nPages: " + pages);
+        System.out.println("Printed Book: " + getTitle() + " by " + getAuthor() + "\nISBN: " + getISBN() + "\nPages: " + pages);
     }
 }
 
-// Derived class: EBook
 class EBook extends Book {
     private double fileSize; // in MB
 
